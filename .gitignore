@@ -1,0 +1,12 @@
+.DS_Store
+*.log
+node_modules
+yarn.lock
+package-lock.json
+# jest result folder:
+coverage
+# build Files:
+public/assets
+public/loadable-stats.json
+public/webpack-assets.json
+

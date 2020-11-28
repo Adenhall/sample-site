@@ -1,0 +1,24 @@
+language: node_js
+
+node_js:
+  - "10"
+  - "11"
+  - "12"
+
+sudo: false
+
+services:
+  - xvfb
+
+script:
+  - yarn flow
+  - yarn lint
+  - yarn test
+  - yarn build
+
+notifications:
+  email:
+    on_failure: change
+
+after_success:
+  - yarn coveralls
